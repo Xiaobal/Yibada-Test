@@ -77,8 +77,8 @@
 <div class="container">
     <p class="薪资">请输入雇员基础月薪：</p>
     <input type="number" id="inputNumber">
-    <p class="VT">请输入VT单次成本：</p>
-    <input type="number" id="vtCost">
+    <p class="VT">请输入交通费单次成本：</p>
+<input type="number" id="vtCost" value="0">
     <button class="分析按钮" onclick="analyzeNumber()">分析</button>
     <p id="result1"></p>
     <p id="result2"></p>
@@ -142,12 +142,12 @@
     }, 180); // 0.4秒延迟
 
     setTimeout(function() {
-        document.getElementById('result3').innerText = "雇员VT成本为： " + vtCost.toFixed(3);
+        document.getElementById('result3').innerText = "雇员交通费成本为： " + vtCost.toFixed(3);
         document.getElementById('result3').style.display = 'block';
     }, 270); // 0.6秒延迟
 
     setTimeout(function() {
-        document.getElementById('finalResult').innerText = "最终数值为： " + finalResult.toFixed(3);
+        document.getElementById('finalResult').innerText = "雇员税后净工资为： " + finalResult.toFixed(3);
         document.getElementById('finalResult').style.display = 'block';
     }, 360); // 0.8秒延迟
 }
